@@ -1,11 +1,20 @@
 #!/bin/usr/env python
 import sys
 
-#this is a ARP Spoofing program for python 2.7
+#this is a ARP Spoofing program for python 3
 
 import scapy.all as scapy
 import time
 import sys
+
+def get_victm(target_ip):
+    ip = input("Enter the IP of the target: ")
+    return ip
+
+def get_gateway(gateway_ip):
+    ip = input("Enter the IP of the router")
+    return ip
+
 
 def get_mac(ip):
     arp_request = scapy.ARP(pdst=ip)
