@@ -7,6 +7,15 @@ import scapy.all as scapy
 import time
 import sys
 
+def get_victm(target_ip):
+    ip = input("Enter the IP of the target: ")
+    return ip
+
+def get_gateway(gateway_ip):
+    ip = input("Enter the IP of the router")
+    return ip
+
+
 def get_mac(ip):
     arp_request = scapy.ARP(pdst=ip)
     brodcast = scapy.Ether(dst="ff:ff:ff:ff:ff:ff")
