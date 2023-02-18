@@ -41,6 +41,7 @@ gateway_ip = ""
 
 get_victm(target_ip)
 get_gateway(gateway_ip)
+
 try:
     sent_packets_count = 0
     while True:
