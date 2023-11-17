@@ -23,7 +23,7 @@ em.set_content(body)
 
 context = ssl.create_default_context()
 
-#sending emial
+#sending email
 with smtplib.SMTP_SSL("smtp.gmail.com", 465, context=context) as smtp:
     smtp.login(emailSender, emailPassword)
     smtp.sendmail(emailSender, emailReceiver, em.as_string())
