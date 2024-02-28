@@ -26,9 +26,9 @@ def get_weather_and_send_sms():
         response = requests.get(url)  #Sending GET request to OpenWeatherMap API
         data = response.json()  #Parsing the JSON response
         
-        if data['cod'] == 200:  # Checking if API response is successful
+        if data['cod'] == 200:  #Checking if API response is successful
             WeatherDescription = data["weather"][0]["description"]  #Extracting your weather description
-            Temperature = data["main"]["temp"]  # Extracting the temperature
+            Temperature = data["main"]["temp"]  #Extracting the temperature
             Message = f"The weather in {CityName} is {WeatherDescription} with a temperature of {Temperature}°F."  #Composing SMS message
             send_sms(Message)  #Sending  a SMS with your weather information
             logging.info("Weather message sent successfully.")  #Logging the success message
