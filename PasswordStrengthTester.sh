@@ -4,6 +4,9 @@
 read -sp "Enter a password to check: " password #Prompting the user to input a password
 echo
 
+#Removing any whitespace
+password=$(echo "$password" | tr -d '[:space:]')
+
 #This if statement is checking if it meets the minimum legenth of 8 characters
 if [ "${#password}" -lt 8 ]; then
     echo "❌ Password is too short. Must be at least 8 characters."
