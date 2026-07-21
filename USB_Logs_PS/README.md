@@ -4,18 +4,6 @@ A lightweight PowerShell script designed for Incident Response, Security Auditin
 
 ---
 
-##Table of Contents
-- [Overview](#overview)
-- [Key Features](#key-features)
-- [Prerequisites & Requirements](#prerequisites--requirements)
-- [Monitored Event IDs](#monitored-event-ids)
-- [How It Works](#how-it-works)
-- [Usage Instructions](#usage-instructions)
-- [Output Details](#output-details)
-- [Error Handling & Security Considerations](#error-handling--security-considerations)
-
----
-
 ##Overview
 
 When conducting forensic investigations or auditing potential unauthorized data exfiltration via removable media, tracking USB connections alone is often insufficient. Correlating hardware events (USB insertion/removal) with file access auditing logs provides actionable visibility into user activity on a Windows system.
